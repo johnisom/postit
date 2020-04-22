@@ -20,4 +20,10 @@ ActiveRecord::Schema.define(version: 20200421192054) do
     t.integer  "user_id"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
