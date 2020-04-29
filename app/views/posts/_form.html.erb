@@ -28,7 +28,7 @@
       <%= f.text_area :description, rows: 5 %>
     </div>
 
-    <%= f.submit "#{@post.new_record? : 'Create' : 'Update'} Post",
+    <%= f.submit "#{@post.new_record? ? 'Create' : 'Update'} Post",
                  class: 'btn btn-primary' %>
   <% end %>
 </div>
