@@ -20,7 +20,6 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post successfully updated'
       redirect_to posts_path
     else
-      flash[:error] = 'Post could not be updated'
       render :new
     end
   end
@@ -33,7 +32,6 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post successfully updated'
       redirect_to @post
     else
-      flash[:error] = 'Post could not be updated'
       render :edit
     end
   end
