@@ -6,7 +6,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'sass-rails', '>= 6'
 gem 'uglifier', '>= 4.2'
 gem 'coffee-rails'
-gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap-sass'
 
 gem 'bcrypt', '~> 3.1.7'
 

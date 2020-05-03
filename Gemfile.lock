@@ -181,7 +181,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap-sass (~> 3.4.1)
+  bootstrap-sass
   coffee-rails
   jbuilder
   jquery-rails (>= 4.3)
