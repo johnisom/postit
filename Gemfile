@@ -1,18 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails'
-gem 'sass-rails'
-gem 'uglifier'
+ruby '2.7.1'
+
+gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
+gem 'sass-rails', '>= 6'
+gem 'uglifier', '>= 4.2'
 gem 'coffee-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.4.1'
 
-gem 'bcrypt'
+gem 'bcrypt', '~> 3.1.7'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-gem 'jquery-rails'
-gem 'turbolinks'
+gem 'jquery-rails', '>= 4.3'
+gem 'turbolinks', '>= 5.2'
 gem 'jbuilder'
 
 group :doc do
@@ -20,9 +19,9 @@ group :doc do
 end
 
 group :development do
-  gem 'quiet_assets'
+#  gem 'quiet_assets'
   gem 'pry'
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :production do
