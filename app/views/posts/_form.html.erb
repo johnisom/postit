@@ -2,24 +2,24 @@
 
 <div class="well">
   <%= form_for @post do |f| %>
-    <div class="control-group">
+    <div class="form-group">
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, class: 'form-control' %>
     </div>
 
-    <div class="control-group">
+    <div class="form-group">
       <%= f.label :url %>
-      <%= f.text_field :url %>
+      <%= f.text_field :url, class: 'form-control' %>
     </div>
 
-    <div class="control-group">
+    <div class="form-group">
       <%= f.label :description %>
-      <%= f.text_area :description, rows: 5 %>
+      <%= f.text_area :description, rows: 5, class: 'form-control' %>
     </div>
 
-    <div class="control-group">
+    <div class="form-group">
       <%= f.label 'Categories' %>
-      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: 'form-control' do |cb| %>
         <% cb.label(class: 'checkbox inline') { cb.check_box(class: 'checkbox') + cb.text } %>
       <% end %>
     </div>
