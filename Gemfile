@@ -14,6 +14,8 @@ gem 'jquery-rails', '>= 4.3'
 gem 'turbolinks', '>= 5.2'
 gem 'jbuilder'
 
+gem 'puma'
+
 group :doc do
   gem 'sdoc', require: false
 end
