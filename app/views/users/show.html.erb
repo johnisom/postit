@@ -18,3 +18,9 @@
     <%= link_to "Comments (#{@user.comments.size})", user_path(@user, tab: 'comments') %>
   </li>
 </ul>
+
+<% if params[:tab] != 'comments' %>
+  <%= render @user.posts %>
+<% elsif params[:tab] == 'comments' %>
+  <%= render @user.comments, show_post: true %>
+<% end %>
