@@ -7,6 +7,8 @@ PostitTemplate::Application.routes.draw do
   get '/register', to: 'users#new'
 
   resources :posts, except: %i[destroy] do
+    post 'vote', on: :member
+
     resources :comments, only: %i[create]
   end
 

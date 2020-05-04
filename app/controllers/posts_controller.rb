@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show edit update]
-  before_action :require_user, except: %i[index show]
+  before_action :set_post, only: %i[show edit update vote]
+  before_action :require_user, only: %i[new create edit update vote]
 
   def index
     @posts = Post.all
@@ -36,6 +36,11 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def vote
+    Vote.create(voteable: @post, creator: current_user, vote: params[:vote])
+    redirect_to root_path
   end
 
   private
