@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :require_user, except: %i[show index]
   protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?

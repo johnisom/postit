@@ -32,13 +32,17 @@
 
 <% if logged_in? %>
   <div class="nav_item">
-    <%= link_to 'New Post', new_post_path, class: 'btn btn-default btn-success navbar-btn' %>
+    <%= link_to 'New Post', new_post_path, class: 'btn btn-success navbar-btn' %>
   </div>
 
   <div class="nav_item">
     <%= link_to 'Log out', logout_path, class: 'btn btn-default navbar-btn' %>
   </div>
 <% else %>
+  <div class="nav_item">
+    <%= link_to 'Register', register_path, class: 'btn  btn-success navbar-btn' %>
+  </div>
+
   <div class="nav_item">
     <%= link_to 'Log in', login_path, class: 'btn btn-default navbar-btn' %>
   </div>
