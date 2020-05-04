@@ -45,7 +45,7 @@ class PostsController < ApplicationController
       vote: params[:vote]
     )
 
-    if vote.errors.none?
+    if vote.valid?
       flash[:notice] = 'Your vote was counted.'
     else
       flash[:danger] = 'You can only vote once.'
