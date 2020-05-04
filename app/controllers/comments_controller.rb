@@ -16,8 +16,17 @@ class CommentsController < ApplicationController
 
   def vote
     comment = Comment.find(params[:id])
-    Vote.create(voteable: comment, creator: current_user, vote: params[:vote])
-    flash[:notice] = 'Your vote was counted.'
+    vote = Vote.create(
+      voteable: comment,
+      creator: current_user,
+      vote: params[:vote]
+    )
+
+    if vote.errors.none?
+      flash[:notice] = 'Your vote was counted.'
+    else
+      flash[:danger] = 'You can only vote once.'
+    end
     redirect_back(fallback_location: root_path)
   end
 
