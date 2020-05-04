@@ -9,7 +9,9 @@ PostitTemplate::Application.routes.draw do
   resources :posts, except: %i[destroy] do
     post 'vote', on: :member
 
-    resources :comments, only: %i[create]
+    resources :comments, only: %i[create] do
+      post 'vote', on: :member
+    end
   end
 
   resources :categories, only: %i[new create show]
