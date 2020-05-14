@@ -8,6 +8,8 @@ gem 'uglifier', '>= 4.2'
 gem 'coffee-rails'
 gem 'bootstrap-sass'
 
+gem 'pg'
+
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'jquery-rails', '>= 4.3'
@@ -21,12 +23,9 @@ group :doc do
 end
 
 group :development do
-#  gem 'quiet_assets'
   gem 'pry'
-  gem 'sqlite3', '~> 1.4'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
